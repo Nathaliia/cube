@@ -86,8 +86,7 @@ class CubeController extends \ApplicationController {
 		}
 		
 		//VISTA
-		echo "<pre>";
-		var_dump($this->errores);
-		var_dump($resultados);
+		return View::make('cube.resultados', array("errores"=>$this->errores,"resultados"=>$resultados,"cantidad_test"=>$t) );
+	
 	}
 }
