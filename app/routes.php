@@ -12,3 +12,4 @@
 */
 
 Route::controller('cube', 'CubeController');
+Route::controller('application', 'ApplicationController');

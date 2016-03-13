@@ -1,6 +1,6 @@
 <?php
 
-class CubeController extends \BaseController {
+class CubeController extends \ApplicationController {
 
 	/**
 	 * Show the form for creating a new cube.

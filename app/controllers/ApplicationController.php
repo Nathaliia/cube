@@ -40,4 +40,41 @@ class ApplicationController extends BaseController {
 		return $cube;
 	}
 
+	/**
+	 * Query and add the values of a range the cube.
+	 *
+	 * @param  int  $n, int $t, array $operaciones, array $cube
+	 * @return Array
+	 */
+	public function Query( $n,$t,$operaciones,$cube )
+	{
+		$x1 = $operaciones[1];
+		$y1 = $operaciones[2];
+		$z1 = $operaciones[3];
+		$x2 = $operaciones[4];
+		$y2 = $operaciones[5];
+		$z2 = $operaciones[6];
+		$suma = 0;
+
+		if( $x1 >= 1 && $x1 <= $x2 && $x2 <= $n ){
+			if( $x1 >= 1 && $x1 <= $x2 && $x2 <= $n ){
+				if( $z1 >= 1 && $z1 <= $z2 && $z2 <= $n ){
+					foreach ($this->actualizados as $key => $value) {
+						$coordenadas = explode(",",$key);
+						if( ($coordenadas[0] >= $x1  && $coordenadas[0] <= $x2) && ($coordenadas[1] >= $y1  && $coordenadas[1] <= $y2) && ($coordenadas[2] >= $z1  && $coordenadas[2] <= $z2) ){
+							$suma += $value;
+						}
+					}
+				} else {
+					$this->errores[$t][] = "Los valores de Z1 y Z2 no corresponden.";
+				}
+			} else {
+				$this->errores[$t][] = "Los valores de Y1 y Y2 no corresponden.";
+			}
+		} else {
+			$this->errores[$t][] = "Los valores de X1 y X2 no corresponden.";
+		}
+
+		return $suma;
+	}
 }
