@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en-US">
-	<head>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<h2>CUBE SUMMATION </h2>
-		<div>
-			<form method="POST" action="/grability/public/cube/store">
-				<br>
-				<label>Casos de prueba</label>
-				<textarea name="text_data"></textarea><br>
-				<input type="submit" />
-			</form>
-		</div>
-	</body>
-</html>
+@extends('layouts.main')
+@section('content')
+<section>
+  <form action="/cube/public/cube/store" method="post">
+		<h3>CUBE SUMMATION</h3>
+    <textarea name="text_data" id="" cols="30" rows="10" placeholder="Ingrese los tests..."></textarea>
+    <input type="submit" value="Iniciar tests" />
+  </form>
+</section>
+@stop

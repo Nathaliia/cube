@@ -1,12 +1,8 @@
-
-<!DOCTYPE html>
-<html lang="en-US">
-	<head>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<h2>CUBE SUMMATION RESULTADOS</h2>
-		<div>
+@extends('layouts.main')
+@section('content')
+<section>
+		<h3>RESULTADOS</h3>
+		<div class="resultados">
       @for ($test=1; $test <= $cantidad_test; $test++)
         {{ "<br>"."test: ".$test."<br>" }}
           @foreach ($resultados[$test] as $result)
@@ -15,11 +11,12 @@
 
           @if( isset($this->errores[$test]) )
             @foreach ($this->errores[$test] as $value)
-              {{ $value }};
+              {{ $value }}
             @endforeach
           @endif
 
       @endfor
 		</div>
-	</body>
-</html>
+		<a href="/cube/public/cube" class="button">Nuevo Test</a>
+</section>
+@stop

@@ -1,0 +1,57 @@
+/*
+  Estilos para el layout principal
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+html, body {
+  background-color: #eee;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+section {
+  background: white;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+textarea {
+  border: none;
+  border-top: 1px solid #eee;
+  font: 400 14px 'Lato', sans-serif;
+  outline: none;
+  padding: 2%;
+  resize: vertical;
+  width: 96%;
+}
+
+input[type="submit"], .button {
+  background-color: #3c82fb;
+  border: none;
+  color: white;
+  display: block;
+  letter-spacing: 1px;
+  font: 700 14px 'Lato', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.resultados {
+  border: 1px solid #eee;
+  text-align: left;
+  padding: 0 20px 10px;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+a.button {
+  display: inline-block;
+  padding: 20px 0;
+  text-decoration: none;
+}
