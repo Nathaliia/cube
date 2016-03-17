@@ -11,7 +11,7 @@ class ApplicationController extends BaseController {
 	 * @param  int  $n,int $t, array $operaciones, array $cube
 	 * @return Array
 	 */
-	public function Update( $n,$t,$operaciones, $cube )
+	public function Update( $n,$t,$operaciones, $cube = array() )
 	{
 		$x = $operaciones[1];
 		$y = $operaciones[2];
@@ -46,7 +46,7 @@ class ApplicationController extends BaseController {
 	 * @param  int  $n, int $t, array $operaciones, array $cube
 	 * @return Array
 	 */
-	public function Query( $n,$t,$operaciones,$cube )
+	public function Query( $n,$t,$operaciones,$cube = array() )
 	{
 		$x1 = $operaciones[1];
 		$y1 = $operaciones[2];
