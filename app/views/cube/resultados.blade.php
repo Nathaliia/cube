@@ -4,7 +4,7 @@
 		<h3>RESULTADOS</h3>
 		<div class="resultados">
       @for ($test=1; $test <= $cantidad_test; $test++)
-        {{ "<br>"."test: ".$test."<br>" }}
+        {{ "<br><label class='titulo_test'>"."TEST ".$test."</label><br>" }}
           @foreach ($resultados[$test] as $result)
             {{ $result."<br>" }}
           @endforeach

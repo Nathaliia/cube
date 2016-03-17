@@ -42,6 +42,9 @@ input[type="submit"], .button {
   width: 100%;
 }
 
+.titulo_test {
+  color : rgb(60, 130, 251);
+}
 .resultados {
   border: 1px solid #eee;
   text-align: left;
