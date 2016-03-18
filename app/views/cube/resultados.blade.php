@@ -9,8 +9,8 @@
             {{ $result."<br>" }}
           @endforeach
 
-          @if( isset($this->errores[$test]) )
-            @foreach ($this->errores[$test] as $value)
+          @if( isset($errores[$test]) )
+            @foreach ($errores[$test] as $value)
               {{ $value }}
             @endforeach
           @endif
