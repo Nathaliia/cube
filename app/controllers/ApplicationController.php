@@ -58,7 +58,7 @@ class ApplicationController extends BaseController {
 
 		if( $x1 >= 1 && $x1 <= $x2 && $x2 <= $n ){
 			if( $y1 >= 1 && $y1 <= $y2 && $y2 <= $n ){
-				if( $z1 >= 1 && $z1 <= $z2 && $z2 <= $n ){
+				if( $z1 >= 1 && $z1 <= $z2 && ($z2 < $n || $z2 == $n) ){
 					foreach ($this->actualizados as $key => $value) {
 						$coordenadas = explode(",",$key);
 						if( ($coordenadas[0] >= $x1  && $coordenadas[0] <= $x2) && ($coordenadas[1] >= $y1  && $coordenadas[1] <= $y2) && ($coordenadas[2] >= $z1  && $coordenadas[2] <= $z2) ){
