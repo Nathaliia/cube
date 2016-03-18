@@ -17,6 +17,6 @@
 
       @endfor
 		</div>
-		<a href="/cube/public/cube" class="button">Nuevo Test</a>
+		<a href="/public/cube" class="button">Nuevo Test</a>
 </section>
 @stop
