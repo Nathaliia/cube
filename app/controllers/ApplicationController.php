@@ -57,7 +57,7 @@ class ApplicationController extends BaseController {
 		$suma = 0;
 
 		if( $x1 >= 1 && $x1 <= $x2 && $x2 <= $n ){
-			if( $x1 >= 1 && $x1 <= $x2 && $x2 <= $n ){
+			if( $y1 >= 1 && $y1 <= $y2 && $y2 <= $n ){
 				if( $z1 >= 1 && $z1 <= $z2 && $z2 <= $n ){
 					foreach ($this->actualizados as $key => $value) {
 						$coordenadas = explode(",",$key);
@@ -66,13 +66,13 @@ class ApplicationController extends BaseController {
 						}
 					}
 				} else {
-					$this->errores[$t][] = "Los valores de Z1 y Z2 no corresponden.";
+					$this->errores[$t][] = "Los valores de Z1 y Z2 no corresponden ".$z1." - ".$z2;
 				}
 			} else {
-				$this->errores[$t][] = "Los valores de Y1 y Y2 no corresponden.";
+				$this->errores[$t][] = "Los valores de Y1 y Y2 no corresponden ".$y1." - ".$y2;
 			}
 		} else {
-			$this->errores[$t][] = "Los valores de X1 y X2 no corresponden.";
+			$this->errores[$t][] = "Los valores de X1 y X2 no corresponden ".$x1." - ".$x2;
 		}
 
 		return $suma;
