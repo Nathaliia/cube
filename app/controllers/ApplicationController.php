@@ -56,9 +56,9 @@ class ApplicationController extends BaseController {
 		$z2 = $operaciones[6];
 		$suma = 0;
 
-		if( $x1 >= 1 && $x1 <= $x2 && $x2 <= $n ){
-			if( $y1 >= 1 && $y1 <= $y2 && $y2 <= $n ){
-				if( intval($z1) >= 1 && intval($z1) <= intval($z2) && (intval($z2) < intval($n) || intval($z2) == intval($n)) ){
+		if( intval($x1) >= 1 && intval($x1) <= intval($x2) && intval($x2) <= intval($n)){
+			if( intval($y1) >= 1 && intval($y1) <= intval($y2) && intval($y2) <= intval($n)){
+				if( intval($z1) >= 1 && intval($z1) <= intval($z2) && intval($y2) <= intval($n)) ){
 					foreach ($this->actualizados as $key => $value) {
 						$coordenadas = explode(",",$key);
 						if( ($coordenadas[0] >= $x1  && $coordenadas[0] <= $x2) && ($coordenadas[1] >= $y1  && $coordenadas[1] <= $y2) && ($coordenadas[2] >= $z1  && $coordenadas[2] <= $z2) ){
@@ -66,7 +66,7 @@ class ApplicationController extends BaseController {
 						}
 					}
 				} else {
-					$this->errores[$t][] = "Los valores de Z1 y Z2 no corresponden ".$z1." - ".$z2." - ".$n;
+					$this->errores[$t][] = "Los valores de Z1 y Z2 no corresponden ".$z1." - ".$z2;
 				}
 			} else {
 				$this->errores[$t][] = "Los valores de Y1 y Y2 no corresponden ".$y1." - ".$y2;
