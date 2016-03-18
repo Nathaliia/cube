@@ -66,7 +66,7 @@ class ApplicationController extends BaseController {
 						}
 					}
 				} else {
-					$this->errores[$t][] = "Los valores de Z1 y Z2 no corresponden ".$z1." - ".$z2;
+					$this->errores[$t][] = "Los valores de Z1 y Z2 no corresponden ".$z1." - ".$z2." - ".$n;
 				}
 			} else {
 				$this->errores[$t][] = "Los valores de Y1 y Y2 no corresponden ".$y1." - ".$y2;
